@@ -4,7 +4,7 @@ async function getAll(){
         xhr.open("GET","https://reqres.in/api/users?page=2");
         xhr.onload = function(){
             if(xhr.status >= 200 && xhr.status < 300){
-                let response = JSON.parse(xhr.responseText);
+                let response = JSON.parse(xhr.responseText)
                 resolve(response)
             }else{
                 console.log("something went wrong : " , xhr.status)
